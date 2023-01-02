@@ -31,7 +31,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter
-@Entity
+@Entity(name="leadz")
 public class Lead implements Serializable {
 
 	/**

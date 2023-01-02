@@ -20,7 +20,7 @@ public class LeadService {
 	@Autowired LeadRepository leadRepository;
 	@Autowired StatusLeadRepository statusLeadRepository;
 	public Lead save(Lead lead) {
-		lead.setStatus(statusLeadRepository.getOne(2L));
+		lead.setStatus(statusLeadRepository.getOne(1L));
 		lead.setDate(new Date());
 		Lead newLead = leadRepository.save(lead);
 		return newLead;

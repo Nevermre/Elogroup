@@ -26,6 +26,7 @@ public class UserService implements UserDetailsService {
 	public User save(User user) {
 		String hash = HashUtil.getSecureHash(user.getPassword());
 		user.setPassword(hash);
+		System.out.println(user);
 		User createdUser = userRepository.save(user);
 		return createdUser;
 		
